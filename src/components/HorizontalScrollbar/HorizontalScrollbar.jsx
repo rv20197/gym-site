@@ -6,12 +6,14 @@ import BodyPart from '../BodyPart/BodyPart';
 import RightArrowIcon from '../../assets/icons/right-arrow.png';
 import LeftArrowIcon from '../../assets/icons/left-arrow.png';
 
+import styles from './HorizontalScrollbar.module.css'
+
 const LeftArrow = () => {
 	const { scrollPrev } = useContext(VisibilityContext);
 
 	return (
-		<Typography onClick={() => scrollPrev()} className='right-arrow'>
-			<img src={LeftArrowIcon} alt='right-arrow' />
+		<Typography onClick={() => scrollPrev()} className={styles['right-arrow']}>
+			<img src={LeftArrowIcon} alt='left-arrow' />
 		</Typography>
 	);
 };
@@ -20,7 +22,7 @@ const RightArrow = () => {
 	const { scrollNext } = useContext(VisibilityContext);
 
 	return (
-		<Typography onClick={() => scrollNext()} className='left-arrow'>
+		<Typography onClick={() => scrollNext()} className={styles['left-arrow']}>
 			<img src={RightArrowIcon} alt='right-arrow' />
 		</Typography>
 	);
