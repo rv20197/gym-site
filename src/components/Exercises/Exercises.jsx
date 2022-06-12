@@ -22,6 +22,22 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 		window.scrollTo({ top: 1800, behavior: 'smooth' });
 	};
 
+	useEffect(() => {
+		const fetchExercisesData = async () => {
+			let exercisesData = [];
+
+			if (bodyPart === 'all') {
+				const url = 'https://exercisedb.p.rapidapi.com/exercises';
+				exercisesData = await fetchData(url, exerciseOptions);
+			} else {
+				const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`;
+				exercisesData = await fetchData(url, exerciseOptions);
+			}
+			setExercises(exercisesData);
+		};
+		fetchExercisesData();
+	}, [bodyPart]);
+
 	return (
 		<Box
 			id='exercises'
