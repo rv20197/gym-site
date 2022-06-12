@@ -7,7 +7,7 @@ const Loader = () => {
 		<Stack
 			direction='row'
 			justifyContent='center'
-			alignItemContent='center'
+			alignContent='center'
 			width='100%'>
 			<Circles color='gray' />
 		</Stack>

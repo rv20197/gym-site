@@ -19,14 +19,11 @@ const ExerciseVideos = ({ exerciseVideos, exerciseName }) => {
 					gap: { lg: '6.875rem', xs: '2.5rem' }
 				}}>
 				{exerciseVideos?.slice(0, 6).map((item, index) => (
-					// <a key={index} className={styles['exercise-video']}></a>
-					<>
-						<ReactPlayer
-							key={index}
-							url={`https://www.youtube.com/watch?v=${item.video.videoId}`}
-							controls
-						/>
-					</>
+					<ReactPlayer
+						key={index}
+						url={`https://www.youtube.com/watch?v=${item.video.videoId}`}
+						controls
+					/>
 				))}
 			</Stack>
 		</Box>
