@@ -27,7 +27,7 @@ const Navbar = () => {
 				<Link to='/' className={styles.Home}>
 					Home
 				</Link>
-				<a href='#excercises' className={styles.excercises}>
+				<a href='#exercises' className={styles.excercises}>
 					Excercises
 				</a>
 			</Stack>
