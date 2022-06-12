@@ -1,0 +1,16 @@
+.detail-image {
+	width: 729px;
+	height: 742px;
+}
+
+.body-part-img {
+	width: 3.125rem;
+	height: 3.125rem;
+}
+
+@media screen and (max-width: 1200px) {
+	.detail-image {
+		width: 300px;
+		height: 300px;
+	}
+}
