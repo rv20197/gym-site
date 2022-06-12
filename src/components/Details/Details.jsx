@@ -8,21 +8,16 @@ import EquipmentImage from '../../assets/icons/equipment.png';
 import styles from './Details.module.css';
 
 const Details = ({ exerciseDetail }) => {
-	const { bodyPart, equipment, gifUrl, id, name, target } = exerciseDetail;
+	const { bodyPart, equipment, gifUrl, name, target } = exerciseDetail;
 
 	const extraDetail = [
 		{
+			id: 1,
 			icon: BodyPartImage,
 			name: bodyPart
 		},
-		{
-			icon: TargetImage,
-			name: target
-		},
-		{
-			icon: EquipmentImage,
-			name: equipment
-		}
+		{ id: 2, icon: TargetImage, name: target },
+		{ id: 3, icon: EquipmentImage, name: equipment }
 	];
 	return (
 		<Stack
@@ -43,11 +38,7 @@ const Details = ({ exerciseDetail }) => {
 					target your {target}. It help you improve your mood and gain energy
 				</Typography>
 				{extraDetail.map(item => (
-					<Stack
-						key={item.name}
-						direction='row'
-						gap='1.5rem'
-						alignItems='center'>
+					<Stack key={item.id} direction='row' gap='1.5rem' alignItems='center'>
 						<Button
 							sx={{
 								background: '#fff2db',
