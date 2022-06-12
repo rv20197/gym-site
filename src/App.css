@@ -71,19 +71,8 @@ body {
 	height: 326px;
 }
 
-.bodyPart-card {
-	transform: scale(1, 1);
-	transition: 0.3s all ease-in-out;
-}
-
-.exercise-card:hover,
-.bodyPart-card:hover {
+.exercise-card:hover {
 	transform: scale(1.1, 1.1);
-}
-
-.search-btn:hover {
-	color: #ff2625 !important;
-	border: 1px solid #ff2625 !important;
 }
 
 .exercise-video {
@@ -108,10 +97,6 @@ body {
 	.left-arrow,
 	.right-arrow {
 		position: static !important;
-	}
-
-	.hero-banner-img {
-		display: none;
 	}
 
 	.exercise-card {
