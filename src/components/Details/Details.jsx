@@ -23,41 +23,52 @@ const Details = ({ exerciseDetail }) => {
 		<Stack
 			gap='3.75rem'
 			sx={{ flexDirection: { lg: 'row' }, p: '1.25rem', alignItems: 'center' }}>
-			<img
-				src={gifUrl}
-				alt={name}
-				loading='lazy'
-				className={styles['detail-image']}
-			/>
-			<Stack sx={{ gap: { lg: '2.1875rem', xs: '1.25rem' } }}>
-				<Typography variant='h3' textTransform='capitalize'>
-					{name}
-				</Typography>
-				<Typography variant='h6' textTransform='capitalize'>
-					Exercise keeps you strong. {name} {` `}is one of the best exercise to
-					target your {target}. It help you improve your mood and gain energy
-				</Typography>
-				{extraDetail.map(item => (
-					<Stack key={item.id} direction='row' gap='1.5rem' alignItems='center'>
-						<Button
-							sx={{
-								background: '#fff2db',
-								borderRadius: '50%',
-								width: '6.25rem',
-								height: '6.25rem'
-							}}>
-							<img
-								src={item.icon}
-								alt={bodyPart}
-								className={styles['body-part-img']}
-							/>
-						</Button>
-						<Typography variant='h5' textTransform='capitalize'>
-							{item.name}
+			{gifUrl ? (
+				<>
+					<img
+						src={gifUrl}
+						alt={name}
+						loading='lazy'
+						className={styles['detail-image']}
+					/>
+					<Stack sx={{ gap: { lg: '2.1875rem', xs: '1.25rem' } }}>
+						<Typography variant='h3' textTransform='capitalize'>
+							{name}
 						</Typography>
+						<Typography variant='h6' textTransform='capitalize'>
+							Exercise keeps you strong. {name} {` `}is one of the best exercise
+							to target your {target}. It help you improve your mood and gain
+							energy
+						</Typography>
+						{extraDetail.map(item => (
+							<Stack
+								key={item.id}
+								direction='row'
+								gap='1.5rem'
+								alignItems='center'>
+								<Button
+									sx={{
+										background: '#fff2db',
+										borderRadius: '50%',
+										width: '6.25rem',
+										height: '6.25rem'
+									}}>
+									<img
+										src={item.icon}
+										alt={bodyPart}
+										className={styles['body-part-img']}
+									/>
+								</Button>
+								<Typography variant='h5' textTransform='capitalize'>
+									{item.name}
+								</Typography>
+							</Stack>
+						))}
 					</Stack>
-				))}
-			</Stack>
+				</>
+			) : (
+				''
+			)}
 		</Stack>
 	);
 };
