@@ -1,7 +1,7 @@
 # Fitness Exercises App with React 18
 
 In this project, learned how to Build and Deploy a Modern React 18 Fitness Exercises App
-With APIs
+With APIs.
 
 ## Functionality
 
@@ -36,9 +36,9 @@ With APIs
   GET https://youtube-search-and-download.p.rapidapi.com/
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
 ## Run Locally
 
@@ -79,7 +79,3 @@ To deploy this project run
 ## Authors
 
 - [Vatsal Rajgor](https://www.linkedin.com/in/vatsal-rajgor/)
-
-## 🛠 Skills
-
-HTML, CSS, Javascript, React
