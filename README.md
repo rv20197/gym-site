@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Fitness Exercises App with React 18
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project, learned how to Build and Deploy a Modern React 18 Fitness Exercises App
+With APIs
 
-## Available Scripts
+## Functionality
 
-In the project directory, you can run:
+    1. Choose exercise categories.
+    2. Target specific muscle groups.
+    3. Browse hundreds of exercises with practical examples.
+    4. Pagination, Exercise details.
+    5. View related youtube videos.
+    6. Display similar exercises.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Client:** React, Material UI(V5), React Router(V6)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Server:** RapidAPI
 
-### `npm test`
+## API Reference
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Get Exercises data
 
-### `npm run build`
+```http
+  GET https://youtube-search-and-download.p.rapidapi.com/
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Get Youtube videos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```http
+  GET https://youtube-search-and-download.p.rapidapi.com/
+```
 
-### `npm run eject`
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Run Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone the project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  git clone https://github.com/rv20197/gym-site
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Go to the project directory
 
-## Learn More
+```bash
+  cd gym-site
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  npm install
+```
 
-### Code Splitting
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  npm run start
+```
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To deploy this project run
 
-### Making a Progressive Web App
+```bash
+  npm install serve
+  npm run build
+  serve -s build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Authors
 
-### Advanced Configuration
+- [Vatsal Rajgor](https://www.linkedin.com/in/vatsal-rajgor/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🛠 Skills
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+HTML, CSS, Javascript, React
