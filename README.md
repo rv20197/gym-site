@@ -14,7 +14,7 @@ With APIs.
 
 ## Tech Stack
 
-**Client:** 1. React, Material UI, React Router, React Player.
+**Client:** React, Material UI, React Router, React Player.
 
 **Server:** RapidAPI
 
